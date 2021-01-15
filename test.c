@@ -10,6 +10,6 @@ int main(){
     printf ("z stores the address of m %x \n", &m);
     //printf ("*z stores the address of m %u", *z);
     printf ("*z stores the address of m %x", *(&z));
-
+    //Now changint 
     return 0;
 }
