@@ -2,32 +2,40 @@
 
 //Basic Syntax Refreshing
 int main(){
-    int m = 29;
-    int n, o;
-    int* z, *ab;
-    z = &m;
-    
-    printf("Address of m: %x \n", z);
-    printf("Value of m: %u \n\n", m);
+    int m = 300;
+    float fx = 300.600006;
+    char cht = 'z';
 
-    printf("Now ab is assigned with the address of m \n");
-    ab = z;
+    printf("address of m = %x \n", &m);
+    printf("address of fx = %x \n", &fx);
+    printf("address of cht = %x \n", &cht);
 
-    printf("Address of pointer ab: %x \n", ab);
-    printf("Content of pointer ab: %u \n\n", *(ab));
+    printf("Value at address of m = %u \n", *(&m));
+    printf("Value at address of fx = %f \n", *(&fx));
+    printf("Value at address of cht = %c \n", *(&cht));
 
-    printf("The m is assigned 34 \n");
+    int *pt1 = &m;
+    float *pt2 = &fx;
+    char *pt3 = &cht;
 
-    m = 34;
+    printf("address of m = %x \n", pt1);
+    printf("address of fx = %x \n", pt2);
+    printf("address of cht = %x \n", pt3);
 
-    printf("Address of pointer ab: %x \n", ab);
-    printf("Content of pointer ab: %u \n\n", *(ab));
+    printf("Value at address of m = %u \n", *(pt1));
+    printf("Value at address of fx = %f \n", *(pt2));
+    printf("Value at address of cht = %c \n", *(pt3));
+
+    *pt1 = 5;
+    *pt2 = 12345678;
+    *pt3 = 'x';
+
+    printf("Value at address of m = %u \n", m);
+    printf("Value at address of fx = %f \n", fx); //This gives a different value, why?
+    printf("Value at address of cht = %c \n", cht);
 
 
-    printf("Pointer variable ab is assigned 7 \n");
-    *ab = 7;
-    printf("Address of m %x \n", &m);
-    printf("value of m %u \n", m);
+
 
 
 
