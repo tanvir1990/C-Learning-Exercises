@@ -2,25 +2,17 @@
 
 //Basic Syntax Refreshing
 int main(){
-    float fx = 300.600006;
+    int a = 5;
+    int b = 10;
 
-    float *pt = &fx;
+    int *pa, *pb, psum;
+    pa = &a;
+    pb = &b;
 
+    int sum = *pa + *pb;
 
-    *pt = 12345678;
-    printf("01 Value at address of fx = %f \n", fx); //This gives a different value, why?
-
-    *pt = 123456789; 
-    printf("02 Value at address of fx = %f \n", fx); //This gives a different value, why?
-
-    *pt = 1234.5678;
-    printf("03 Value at address of fx = %f \n", fx); //This gives a different value, why?
-
-   *pt = 12345678.0;
-    printf("04 Value at address of fx = %f \n", fx); //This gives a different value, why?
-
-   *pt = 12345678.1;
-    printf("05 Value at address of fx = %f \n", fx); //This gives a different value, why?
+    printf("%u", sum);
+    
 
     return 0;
 }
