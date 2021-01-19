@@ -2,24 +2,20 @@
 
 //Basic Syntax Refreshing
 
-// int add(int *pa, int *pb){
-//     int sum = *pa + *pb;
-//     return sum;
-// }
 int main(){
-    int a = 5;
-    int b = 10;
+    int n = 5;
+    int e[2];
+    // for (int i = 0; i < n; i++){
+    //     e[i] = i;
+    // }
+    e[0] = 1;
+    e[1] = 2;
+    printf("%d \n", *e);
+    printf("%d \n", *(e+1));
+    printf("%d \n", e+2);
+    printf("%d \n", e+3);
 
-    int *pa, *pb;
-    pa = &a;
-    pb = &b;
 
-    if ( *pa > *pb){
-        printf("%u is greater", *pa);
-    }
-    else 
-        printf("%u is greater", *pb);
-    
 
     return 0;
 }
