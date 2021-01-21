@@ -18,6 +18,8 @@ int main(){
     }
     
     //Assigning Some Random Values to the 5 addresses
+    //We need to exactly input 5 values other wise, there 
+    //will be garbage values
     *(ptr + 0) = 1;
     *(ptr + 1) = 2;
     *(ptr + 2) = 10;
