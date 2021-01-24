@@ -9,17 +9,16 @@
 */
 
 int count_vowel_and_consonants(char* str, int* vowel_number, int* consonant_number){
-    int i = 0;
 
-    while (*(str+i) != '\0'){
-        if (*(str+i) == 'a'|| *(str+i) == 'e'|| *(str+i) == 'i'||
-                    *(str+i) == 'o'|| *(str+i) == 'u'){
-                *vowel_number = *vowel_number +1 ;
+    while (*(str) != '\0'){
+        if (*(str) == 'a'|| *(str) == 'e'|| *(str) == 'i'||
+                    *(str) == 'o'|| *(str) == 'u'){
+                *vowel_number = *vowel_number + 1 ;
             }
         else {
             *consonant_number = *consonant_number + 1;
         }
-        i++;
+        str++;
     }
 }
 
@@ -29,7 +28,7 @@ int count_vowel_and_consonants(char* str, int* vowel_number, int* consonant_numb
  * 
 */ 
 int main(){
-    char str[] = "Tanvir";
+    char str[] = "Test";
     int vowel_no = 0;
     int consonant_no = 0;
 
