@@ -1,37 +1,38 @@
-//Given a String, print all the permutations
-
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>
 
-int swap(int *a, int *b){
-
+void changePosition(char *ch1, char *ch2)
+{
+    char tmp;
+    tmp = *ch1;
+    *ch1 = *ch2;
+    *ch2 = tmp;
 }
-
-
-
-int main(){
-
-    char s[] = "ABC";
-    char ch = 'c';
-
-    strncat(s, &ch, 1 );
-
-    printf("%s", s);
-    for (int i =0; s[i] != '\0'; i++){
-        char c_1 = s[i];
-        char c_2 = s[i+1];
-
-    strncat(c_1, c_2, 1 );
-    printf("%s", c_1);
-
-
-    }
-    
-
-
-
-
-    
-
-
+void charPermu(char *cht, int stno, int endno)
+{
+   int i;
+   if (stno == endno)
+     printf("Final %s  \n", cht);
+   else
+   {
+       for (i = stno; i <= endno; i++)
+       {  printf("%s  \n", (cht+stno));
+          changePosition((cht+stno), (cht+i));
+          charPermu(cht, stno+1, endno);
+          changePosition((cht+stno), (cht+i)); 
+          //printf("%s  \n", cht);
+       }
+   }
+}
+ 
+int main()
+{
+    char str[] = "abc";
+   printf("\n\n Pointer : Generate permutations of a given string :\n"); 
+   printf("--------------------------------------------------------\n"); 
+    int n = strlen(str);
+    printf(" The permutations of the string are : \n");
+    charPermu(str, 0, n-1);
+     printf("\n\n");
+    return 0;
 }
