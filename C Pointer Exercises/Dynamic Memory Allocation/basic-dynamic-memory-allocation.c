@@ -4,7 +4,7 @@
 //Find the maximum number using Dynamic Memory Allocation
 
 int main(){
-    
+
     int n, i, *ptr, sum = 0;
     static int largest_value = 0;
     n = 5;
@@ -34,7 +34,7 @@ int main(){
         }
     }
 
-    printf("largest Value is %d \n", largest_value);
+    printf("Largest Value is %d \n", largest_value);
     free(ptr);
 
     return 0;
